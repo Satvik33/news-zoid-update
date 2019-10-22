@@ -180,7 +180,7 @@ export class UserRegistrationComponent implements OnInit {
     this.userRegistration.saveUser(this.userObject)
     .subscribe(
       ()=>{this.ngOnInit();
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigateByUrl('/login');
       }
     );
 

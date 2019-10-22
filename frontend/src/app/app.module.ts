@@ -21,12 +21,14 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { ReactiveFormsModule }         from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { NewComponentComponent } from './new-component/new-component.component'; 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavbarComponent, LoginComponent, TrendingvideosComponent, FooterComponent, DashboardComponent, UserRegistrationComponent, HomeComponent],
-  imports: [BrowserModule, ReactiveFormsModule, MaterialModule, MatGridListModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, HttpClientModule, MatTabsModule, MatDividerModule],
+  declarations: [AppComponent, HeaderComponent, NavbarComponent, LoginComponent, TrendingvideosComponent, FooterComponent, DashboardComponent, UserRegistrationComponent, HomeComponent, NewComponentComponent],
+  imports: [BrowserModule, ReactiveFormsModule,ScrollingModule, MaterialModule, MatGridListModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, HttpClientModule, MatTabsModule, MatDividerModule],
   providers: [],
   bootstrap: [AppComponent]
 })

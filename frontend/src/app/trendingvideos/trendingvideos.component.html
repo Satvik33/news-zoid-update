@@ -3,13 +3,15 @@
      <mat-tab label = "National" color = "primary">
  
      
- <mat-card *ngFor = "let article of articles.articles; let i = index">
-    
-    <div>
+ <mat-grid-list cols = "2" rowHeight = "600px">
+        <section class = "content">
+    <mat-grid-tile *ngFor = "let article of articles.articles; let i = index">
+    <div class = "content">
+        <div>
 
         <strong>{{article.author}}</strong>
         </div>
-        <div>
+        <div class = "description">
         <em>{{article.title}}</em>
             </div>
         <div class = "description">{{article.description}}</div>
@@ -18,23 +20,27 @@
         <div>Date Published {{article.publishedAt}}</div>
         <div class = "description">{{article.content}}</div>
         <div><a href="{{article.url}}" target="_blank">Full Description</a></div>
-        
-        
-    
+        </div>
+      </mat-grid-tile>
+      </section>
+      
+</mat-grid-list>
 
-</mat-card> 
+ 
 
-       
+ 
 
 </mat-tab>
 <mat-tab label = "International">
-        <mat-card *ngFor = "let article of USArticles.articles; let i = index">
-    
+        <mat-grid-list cols = "2">
+                <mat-grid-tile *ngFor = "let article of USArticles.articles; let i = index">
+        
+                <div>            
                 <div>
             
                     <strong>{{article.author}}</strong>
                     </div>
-                    <div>
+                    <div class = "description">
                     <em>{{article.title}}</em>
                         </div>
                     <div class = "description">{{article.description}}</div>
@@ -44,10 +50,11 @@
                     <div class = "description">{{article.content}}</div>
                     <div><a href="{{article.url}}">Full Description</a></div>
                     
-                    
+                    </div>
                 
             
-            </mat-card> 
+            </mat-grid-tile>
+            </mat-grid-list>
 </mat-tab>
 </mat-tab-group>
 

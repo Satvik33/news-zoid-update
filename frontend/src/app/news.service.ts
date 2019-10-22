@@ -32,7 +32,7 @@ export class NewsService {
 
       getApiforUS(): Observable<any>{
         let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=1fc9b151fd754c708c489de5bf1fe259";
-        return this.http.get<any>(url)
+        return this.http.get<any>(url, )
         .pipe(map((res) => {
           return res;
         }))
