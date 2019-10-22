@@ -1,0 +1,7 @@
+body {
+  flex: 1;
+  background-color: aquamarine;
+}
+.fill-remaining-space{
+flex: auto;
+}
